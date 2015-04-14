@@ -60,3 +60,38 @@ for (i = (array.length - 1); i < 0; i--) {
 //"19"
 value = parseInt(value);
 newVar = parseInt(newVar);
+
+value = value + newVar;
+
+if(value < 60){
+  value = 14;
+} else if(value == 2930){
+  value = 27;
+} else {
+  value = 2;
+}
+
+i = 10;
+
+while(i>0){
+  value++;
+  i--;
+}
+
+function myFunc(val){
+  val.toString();
+  if(val.length > 1){
+    var tempVal = "";
+    for(i = 1; i < val.length; i++){
+      tempVal += val.charAt(i);
+    }
+    return tempVal;
+  }
+  else {
+    return val;
+  }
+}
+
+value = myFunc(value);
+
+console.log(value);
