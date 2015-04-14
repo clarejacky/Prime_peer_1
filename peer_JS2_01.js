@@ -43,7 +43,7 @@ if (value >= 53) {
 //29
 value += "11";
 //"2911"
-var array [];
+var array = [];
 var i = 0;
 for(i =0; i < value.length; i++){
 	array.push(value.charAt(i));
@@ -54,14 +54,20 @@ array.shift();
 //[9,1]
 var newVar = "";
 
-for (i = (array.length - 1); i < 0; i--) {
-	newVar += array[i];
+console.log(array);
+i = array.length - 1;
+
+for(; i >= 0; i--){
+  newVar += array[i];
 }
-//"19"
+console.log(newVar);
+// newVar = "19"
+// value = "2911"
 value = parseInt(value);
 newVar = parseInt(newVar);
 
 value = value + newVar;
+// value = 2930
 
 if(value < 60){
   value = 14;
@@ -70,6 +76,7 @@ if(value < 60){
 } else {
   value = 2;
 }
+// value = 27
 
 i = 10;
 
@@ -77,21 +84,20 @@ while(i>0){
   value++;
   i--;
 }
+// value = 37
 
 function myFunc(val){
-  val.toString();
+  val = val.toString();
   if(val.length > 1){
-    var tempVal = "";
-    for(i = 1; i < val.length; i++){
-      tempVal += val.charAt(i);
-    }
-    return tempVal;
+    val = val.slice(1);
+    return val;
   }
   else {
     return val;
   }
 }
 
+console.log(value);
 value = myFunc(value);
 
-console.log(value);
+console.log(value);  
