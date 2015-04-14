@@ -41,17 +41,21 @@ if (value >= 53) {
 	value -= 13;
 }
 //29
+document.getElementById('step_one').innerHTML = "Our current value is " + value;
 value += "11";
 //"2911"
+document.getElementById('step_two').innerHTML = "Our current value is " + value;
 var array = [];
 var i = 0;
 for(i =0; i < value.length; i++){
 	array.push(value.charAt(i));
 }
 // [2,9,1,1]
+document.getElementById('step_three').innerHTML = "Our array is [" + array+"]";
 array.pop();
 array.shift();
 //[9,1]
+document.getElementById('step_four').innerHTML = "Our array is [" + array+"]";
 var newVar = "";
 
 console.log(array);
@@ -61,6 +65,7 @@ for(; i >= 0; i--){
   newVar += array[i];
 }
 console.log(newVar);
+document.getElementById('step_five').innerHTML = "Our current value is \"" + value+"\"";
 // newVar = "19"
 // value = "2911"
 value = parseInt(value);
@@ -68,7 +73,7 @@ newVar = parseInt(newVar);
 
 value = value + newVar;
 // value = 2930
-
+document.getElementById('step_six').innerHTML = "Our current value is " + value;
 if(value < 60){
   value = 14;
 } else if(value == 2930){
@@ -77,7 +82,7 @@ if(value < 60){
   value = 2;
 }
 // value = 27
-
+document.getElementById('step_seven').innerHTML = "Our current value is " + value;
 i = 10;
 
 while(i>0){
@@ -85,7 +90,7 @@ while(i>0){
   i--;
 }
 // value = 37
-
+document.getElementById('step_eight').innerHTML = "Our current value is " + value;
 function myFunc(val){
   val = val.toString();
   if(val.length > 1){
@@ -96,8 +101,9 @@ function myFunc(val){
     return val;
   }
 }
-
 console.log(value);
 value = myFunc(value);
 
-console.log(value);  
+console.log("Our answer is \""+value+"\"");  
+
+document.getElementById('answer').innerHTML = "Our answer is \""+value+"\"";

@@ -9,7 +9,122 @@
   </head>
   
   <body> 
-    <script src="peer_JS2_01.js"></script>
+  	<h1>Peer Coding Challenge</h1>
+  	<p>We started by creating a variable "value" and set it equal to 42.</p>
+ 	<pre> 
+ 		<code>var value = 42;</code>
+ 	</pre>
+
+<p>We created a conditional to check if the value was greater or equal to 53. Value is less than 53 so the if statement was false, causing the else statement to run and we subtracted 13 from value.</p> 
+<pre>
+	<code>if (value >= 53) {
+	value += 42;
+} else {
+	value -= 13;
+}
+</code>
+</pre>
+<p id="step_one"></p>
+<p>We concatenated value with "11".</p>
+<pre>
+	<code>
+value += "11";
+</code>
+</pre>
+<p id="step_two"></p>
+<p>We created an array and pushed new values to the array from the string using charAt.</p>
+<pre>
+	<code>
+var array = [];
+var i = 0;
+for(i =0; i < value.length; i++){
+	array.push(value.charAt(i));
+}
+</code>
+</pre>
+<p id="step_three"></p>
+<p>We removed the first and last indices from the array using pop and shift.</p>
+<pre>
+	<code>
+array.pop();
+array.shift();
+</code>
+</pre>
+<p id="step_four"></p>
+<p>We created a new variable newVar and moving backwards through the array, added new values to our variable newVar.</p>
+<pre>
+	<code>
+var newVar = "";
+
+i = array.length - 1;
+
+for(; i >= 0; i--){
+  newVar += array[i];
+}
+</code>
+</pre>
+<p id="step_five"></p>
+<p>We converted value and newVar from strings to numbers and set value to the sum of value and newVar.</p>
+<pre>
+	<code>
+value = parseInt(value);
+newVar = parseInt(newVar);
+
+value = value + newVar;
+</code>
+</pre>
+<p id="step_six"></p>
+<p>We created a conditional that checked if value less than 60 or equal to 2930 or neither.</p>
+<pre>
+	<code>
+if(value < 60){
+  value = 14;
+} else if(value == 2930){
+  value = 27;
+} else {
+  value = 2;
+}
+</code>
+</pre>
+<p id="step_seven"></p>
+<p>We ran a while loop that counted down from 10 and incremented value by 1 each loop.</p>
+<pre>
+	<code>
+i = 10;
+
+while(i>0){
+  value++;
+  i--;
+}
+</code>
+</pre>
+<p id="step_eight"></p>
+<p>We created a function that accepted an argument val. The function converts val to a string. If there is more than one character, the function drops the first character off the string and returns val.</p>
+<pre>
+	<code>
+function myFunc(val){
+  val = val.toString();
+  if(val.length > 1){
+    val = val.slice(1);
+    return val;
+  }
+  else {
+    return val;
+  }
+}
+</code>
+</pre>
+<p>We called our function inputing value as the parameter and set it equal to value.</p>
+<pre>
+	<code>
+console.log(value);
+value = myFunc(value);
+
+console.log(value);</code>
+    </pre>
+    
+    <p id="answer"></p>
+	<script src="peer_JS2_01.js"></script>
   </body>
 
 
